@@ -17,13 +17,6 @@ jobs:
         go-version: 1.18
       id: go
 
-    - uses: actions/cache@v3s
-      with:
-        path: ~/go/bin/
-        key: ${{ runner.os }}-go-blogsync
-        restore-keys: |
-          ${{ runner.os }}-go-blogsync
-
     - name: Check out code into the Go module directory
       uses: actions/checkout@v3
 
